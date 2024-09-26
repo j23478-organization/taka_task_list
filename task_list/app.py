@@ -1,8 +1,11 @@
-from typing import Dict, List
 
 from task_list.console import Console
-from task_list.task import Task
+from task_list.entity.task import Task
+from task_list.entity.to_do_list import ToDoList
 
+
+
+    
 
 class TaskList:
     QUIT = "quit"
@@ -10,7 +13,7 @@ class TaskList:
     def __init__(self, console: Console) -> None:
         self.console = console
         self.last_id: int = 0
-        self.tasks: Dict[str, List[Task]] = dict()
+        self.tasks: ToDoList = ToDoList()
 
     def run(self) -> None:
         while True:
