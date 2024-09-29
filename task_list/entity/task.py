@@ -1,5 +1,7 @@
+from task_list.entity.task_id import TaskId
+
 class Task:
-    def __init__(self, id_: int, description: str, done: bool) -> None:
+    def __init__(self, id_: TaskId, description: str, done: bool) -> None:
         self.id = id_
         self.description = description
         self.done = done
